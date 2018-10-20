@@ -1,0 +1,95 @@
+.button {
+  border: 1rpx solid transparent;
+  padding: 10rpx 34rpx;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+}
+.button-hover {
+  opacity: 0.7;
+}
+
+.border-pill {
+  border-radius: 100rpx;
+}
+
+.button-block {
+  display: block;
+}
+
+.button-sx {
+  font-size: 22rpx;
+  padding: 8rpx 12rpx;
+}
+
+.button-sm {
+  font-size: 26rpx;
+  padding: 8rpx 20rpx;
+}
+
+.button-long {
+  font-size: 26rpx;
+  padding: 8rpx 40rpx;
+}
+
+.button-lg {
+  font-size: 32rpx;
+  padding: 16rpx 50rpx;
+}
+
+.button-default {
+  background: transparent;
+}
+
+.button-secondary {
+  color: #fff;
+  background: #353535;
+}
+
+.button-secondary-plain {
+  color: #353535;
+  background: transparent;
+  border-color: #353535;
+}
+
+.button-warning {
+  color: #fff;
+  background: #FF7043;
+  border-color: #FF7043;
+}
+
+.button-warning-plain {
+  color: #FF7043;
+  background: transparent;
+  border-color: #FF7043;
+}
+
+.button-primary {
+  color: #1c89ea;
+  background: #fff;
+  border-color: #1c89ea;
+}
+
+.button-plump {
+  color: #fff;
+  background: #1c89ea;
+  border-color: #1c89ea;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.button-primary-plain {
+  color: #1c89ea;
+  background: transparent;
+  border-color: #1c89ea;
+}
+
+.button-disable {
+  background: #bcc1cc;
+  border: none;
+}

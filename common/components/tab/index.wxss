@@ -1,0 +1,33 @@
+.tabs .tabs-menu {
+  width: 100%;
+  white-space: nowrap;
+  overflow: scroll;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.tabs .tabs-menu > view {
+  display: inline-block;
+  opacity: 0.5;
+  padding: 20rpx 0;
+  margin: 0 50rpx;
+  border-bottom: 2px solid #fff;
+  font-size: 28rpx;
+}
+
+.tabs .tabs-menu > view.active {
+  opacity: 1;
+  border-bottom: 2px solid #333;
+}
+
+.tabs .tabs-content {
+  padding-top: 80rpx;
+}
+
+.tabs .tabs-content.no-padding-top {
+  padding-top: 0;
+}

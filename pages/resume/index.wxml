@@ -1,0 +1,53 @@
+<view class="container">
+  <card isBlock="{{false}}">
+    <image
+      src="https://fe.imdada.cn/bellflower/images/resume-bg.png"
+      mode="widthFix"
+      class="width-100"
+    ></image>
+    <title level="5" class="text-center">详细填写个人简历，会提高您的录取率哦～</title>
+    <view class="resume-area">
+      <title level="5">填写：</title>
+      <view>
+        <textarea
+          class="text-area"
+          placeholder="例：京东京滨园区拣货 - 1年"
+          placeholder-style="color: #D8D8D8"
+          name="textarea"
+          bindinput="bindResumeInput"
+          value="{{resumeText}}"
+          maxlength="300"
+          auto-height
+        />
+        <view class="margin-top-lg text-center">
+          <btn
+            btn-class="herf-btn"
+            size="lg"
+            pill
+            disable
+            type="secondary"
+            wx:if="{{!canSubmit}}">
+            提交
+          </btn>
+          <btn
+            btn-class="herf-btn"
+            size="lg"
+            pill
+            type="plump"
+            bindtap="submitForm"
+            wx:if="{{canSubmit && !submitLoading}}">
+            提交
+          </btn>
+          <btn
+            btn-class="herf-btn"
+            size="lg"
+            pill
+            type="plump"
+            wx:if="{{canSubmit && submitLoading}}">
+            <icon type="loading-circle" />
+          </btn>
+        </view>
+      </view>
+    </view>
+  </card>
+</view>

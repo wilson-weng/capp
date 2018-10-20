@@ -1,0 +1,14 @@
+<view class="container">
+  <import src="./containers/tab.wxml" />
+  <template is="abnormal-tab" data="{{...tab}}" />
+  <view style="height: 112rpx;"></view>
+
+  <block wx:if="{{tabType === CONSTANTS.TAB_COMPENSATE}}">
+    <import src="./containers/compensate.wxml" />
+    <template is="compensate" data="{{...compensate}}" />
+  </block>
+  <block wx:if="{{tabType === CONSTANTS.TAB_BREAK_RULES}}">
+    <import src="./containers/breakRules.wxml" />
+    <template is="breakRules" data="{{...break_rules}}" />
+  </block>
+</view>

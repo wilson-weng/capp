@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="padding">
+    共计{{bill.abnormal_count}}笔异常赔付，共{{bill.total_penalty_amount}}元。
+  </view>
+  <group>
+    <cell wx:for="{{compensateList}}" wx:key="index" bindtap="toDetail" data-id="{{item.id}}">
+      <view slot="body">
+        单号：{{item.order_number}}
+      </view>
+      <view slot="footer">
+        <view class="padding-y-sm"><text class="padding-x-sm">{{item.penalty_amount}}元</text></view>
+      </view>
+    </cell>
+  </group>
+  <view class="pic-block">
+    <view class="padding-y">签单记录</view>
+    <view class="pic-content">
+      <view class="pic-item" wx:for="{{picList}}" wx:key="index">
+        <image
+          src="{{item.url}}"
+          mode="scaleToFill"
+          data-url="{{item.url}}"
+          style="width: 100%;height: 100%;background-color: #eeeeee;"
+          bindtap="previewPhoto"
+        ></image>
+        <icon
+          type="enlarge"
+          style="position: absolute;right: 0;top: 0;"
+        ></icon>
+        <view class="pic-mask">签单照</view>
+      </view>
+      <view wx:if="{{!picList.length}}">暂无签单记录</view>
+    </view>
+  </view>
+</view>

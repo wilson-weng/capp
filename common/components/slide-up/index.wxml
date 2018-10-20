@@ -1,0 +1,11 @@
+<block>
+  <view class="slide-up-mask" wx:if="{{show}}" animation="{{maskAnimation}}"></view>
+  <view class="slide-up-content" wx:if="{{show}}" animation="{{slideAnimation}}">
+    <view class="slide-header">
+      <view class="cancel" bindtap="handleCancelClick" hover-class="view-hover">取消</view>
+      <view class="title">{{title}}</view>
+      <view class="confirm" bindtap="handleOkClick" hover-class="view-hover">确认</view>
+    </view>
+    <slot></slot>
+  </view>
+</block>

@@ -1,0 +1,60 @@
+/**app.wxss**/
+@import './common/styles/app.wxss';
+@import './common/components/icon/index.wxss';
+@import './pages/wxParse/wxParse.wxss';
+
+page {
+  height: 100%;
+  background-color: #f4f4f4;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.herf-btn {
+  width: 550rpx;
+  font-size: 36rpx !important;
+  padding: 10rpx 0 !important;
+  /*这里要加important 否则不会覆盖组件相同属性的样式，为小程序bug*/
+}
+
+.text-indent-2 {
+  text-indent: 55rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 20rpx 30rpx;
+  z-index: 10000;
+  width: calc(100% - 60rpx);
+  background-color: #fff;
+  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.submit-btn {
+  width: 500rpx;
+  margin: 0 auto;
+}
+
+.no-result-p-t {
+  padding-top: 300rpx;
+}
+
+/*income & abnormal styles*/
+
+.month-bar {
+  padding: 20rpx;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+
+.footer-bottom-content {
+  position: relative;
+  max-width: 400rpx;
+  white-space:pre-line;
+  word-break:break-all;
+  overflow: hidden;
+}

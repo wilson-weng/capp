@@ -1,0 +1,2 @@
+<view class="{{['icon', 'icon-' + type, size ? 'icon-' + size : '']}}" />
+

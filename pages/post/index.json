@@ -1,0 +1,11 @@
+{
+  "backgroundColor": "#fdfdfd",
+  "usingComponents": {
+    "btn": "../../common/components/button/index",
+    "group": "../../common/components/group/index",
+    "cell": "../../common/components/cell/index",
+    "icon": "../../common/components/icon/index",
+    "recruit-modal": "../../common/components/modal/index"
+  }
+}
+

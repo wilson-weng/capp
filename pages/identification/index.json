@@ -1,0 +1,13 @@
+{
+  "backgroundColor": "#fdfdfd",
+  "usingComponents": {
+    "btn": "../../common/components/button/index",
+    "group": "../../common/components/group/index",
+    "cell": "../../common/components/cell/index",
+    "icon": "../../common/components/icon/index",
+    "title": "../../common/components/title/index",
+    "modal": "../../common/components/modal/index",
+    "card": "../../common/components/card/index"
+  }
+}
+

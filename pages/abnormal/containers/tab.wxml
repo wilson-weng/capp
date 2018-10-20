@@ -1,0 +1,21 @@
+<template name="abnormal-tab">
+  <view class="tab-wrapper">
+    <tab
+      bind:tabChange="onChangeTab"
+      active-text-color="{{activeTextColor}}"
+      active-line-color="{{activeLineColor}}"
+      textColor="{{textColor}}"
+      component-id="{{id}}"
+      animate="{{true}}"
+    >
+      <tab-item
+        wx:for="{{tabs}}"
+        wx:for-item="tabItem"
+        wx:key="{{tabItem.content}}"
+        tab-index="{{index}}"
+        component-id="{{id}}"
+        label="{{tabItem.title}}"
+      ></tab-item>
+    </tab>
+  </view>
+</template>

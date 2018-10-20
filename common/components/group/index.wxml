@@ -1,0 +1,5 @@
+<view class="{{['group', shadow ? 'shadow' : '']}}">
+  <view wx:if="{{hasBorder}}" class="hr-top" />
+  <slot></slot>
+  <view wx:if="{{hasBorder}}" class="hr-bottom" />
+</view>

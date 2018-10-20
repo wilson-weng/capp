@@ -1,0 +1,11 @@
+<view class="container">
+    <image
+        src="{{previewUrls[0]}}"
+        mode="widthFix"
+        bindtap="previewPhoto"
+        class="width-100"
+    ></image>
+    <view class="margin-top-lg text-center text-bold text-lg">
+        <text>请点击图片长按识别小程序码填写报名信息哦</text>
+    </view>
+</view>

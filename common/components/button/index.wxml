@@ -1,0 +1,7 @@
+<view
+  class="{{['button', size ? 'button-' + size : '', type ? 'button-' + type : '', block ? 'button-block' : '', plain ? 'button-' + type + '-plain' : '', pill ? 'border-pill' : '', disable ? 'button-disable' : '', 'btn-class']}}"
+  hover-class="button-hover"
+>
+  <icon wx:if="{{loading}}" type="loading-circle" size="{{size}}" />
+  <slot></slot>
+</view>

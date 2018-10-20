@@ -1,0 +1,30 @@
+<view class="container">
+  <card>
+    <view class="income-group">
+      <view wx:for="{{list}}" wx:key="index" wx:item="{{item}}">
+        <!--<view wx:if="{{item.scale==='month'}}" class="month-bar">{{item.data}}</view>-->
+        <cell data-item="{{item}}" hasArrow="{{false}}" hasBorder="{{false}}">
+          <view slot="body">
+            <view class="margin-bottom"><text class="text-huge">{{item['生产日期']}}</text></view>
+            <view class="text-muted"><text>拣货500件，打包1200单</text></view>
+          </view>
+          <view slot="footer">
+            <view class="margin-bottom text-right text-huge">
+              <text wx:if="{{item['当日收入']}}">{{item['当日收入']}}元</text>
+            </view>
+          </view>
+        </cell>
+      </view>
+    </view>
+  </card>
+  <view
+    class="text-center padding-y-lg text-blank"
+    wx:if="{{list.length}}"
+  >
+    没有更多了哦～
+  </view>
+  <view wx:if="{{!list.length}}" class="text-center no-result-p-t">
+    <icon type="no-result-income"></icon>
+    <view class="margin-top text-muted text-lg">暂时没有数据</view>
+  </view>
+</view>

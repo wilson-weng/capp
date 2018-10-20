@@ -1,0 +1,1 @@
+<view class="{{['timer', 'timer-class', inline ? 'inline-block' : '']}}">{{timeText}}</view>

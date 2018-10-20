@@ -1,0 +1,3 @@
+<view class="{{['title', level ? 'title-h' + level : '']}}">
+  <slot></slot>
+</view>

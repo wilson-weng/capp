@@ -1,0 +1,80 @@
+<view class="container">
+  <view class="head" wx:if="{{step === 1}}">
+    <icon type="default-head" size="5x" wx:if="{{!userInfo.avatarUrl}}"></icon>
+    <image src="{{userInfo.avatarUrl}}" class="avatar" wx:else></image>
+    <view class="nick-name">{{userInfo.nickName}}</view>
+  </view>
+
+  <view wx:if="{{step === 2}}" class="head step-2">
+    <view class="nick-name">验证码已发送至</view>
+    <view class="phone-timer">
+      <view class="flex"><text class="phone-font">{{phone}}</text><text bindtap="goBack" class="padding-left text-primary">修改</text></view>
+      <timer time="{{60}}" bindcomplete="changeTimerShow" timer-class="my-timer flex" wx:if="{{showTimer}}"></timer>
+      <view wx:if="{{!showTimer}}" bindtap="sendValidateCode" class="text-primary flex">重新发送验证码</view>
+    </view>
+  </view>
+
+  <view class="phone-input" wx:if="{{step === 1}}">
+    <input
+      bindinput="setPhone"
+      type="number"
+      maxlength="13"
+      focus="{{phoneFoucs}}"
+      style="height: 70rpx"
+      placeholder="请输入手机号码"
+      placeholder-class="text-phdr"
+    ></input>
+  </view>
+  <view class="phone-input code" wx:if="{{step === 2}}">
+    <input
+      bindinput="setValidateCode"
+      value="{{validateCode}}"
+      type="number"
+      maxlength="4"
+      focus
+      style="height: 70rpx"
+      placeholder="请输入短信验证码"
+      placeholder-class="text-phdr"
+    ></input>
+  </view>
+  <view class="['step-title'], {{codeError ? 'text-minus' : 'text-bold'}}" wx:if="{{codeError}}">
+    {{stepTitle}}
+  </view>
+  <view class="btn-area">
+    <btn
+      disable="{{!phoneValidate}}"
+      size="lg"
+      bindtap="confirmPhone"
+      wx:if="{{step === 1}}"
+      type="plump"
+      pill
+      block
+    >
+      下一步
+    </btn>
+    <btn
+      disable="{{!codeValidate}}"
+      size="lg"
+      bindtap="confirmBind"
+      wx:if="{{step === 2 && canClick}}"
+      type="plump"
+      pill
+      block
+    >
+      确定
+    </btn>
+    <btn
+      block
+      pill
+      type="plump"
+      size="lg"
+      wx:if="{{!canClick}}"
+    >
+      <icon type="loading-circle" />
+    </btn>
+  </view>
+  <view class="tip-title margin-top-lg">
+    <text wx:if="{{step === 1}}" class="text-muted text-sm">{{tipTitle}}</text>
+  </view>
+</view>
+

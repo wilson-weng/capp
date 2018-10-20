@@ -1,0 +1,12 @@
+{
+  "backgroundColor": "#fff",
+  "usingComponents": {
+    "cell": "../../common/components/cell/index",
+    "tab": "../../common/components/new-tab/index",
+    "tab-item": "../../common/components/new-tab-item/index",
+    "icon": "../../common/components/icon/index",
+    "card": "../../common/components/card/index"
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

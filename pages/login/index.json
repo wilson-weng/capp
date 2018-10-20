@@ -1,0 +1,8 @@
+{
+  "backgroundColor": "#fff",
+  "usingComponents": {
+    "icon": "../../common/components/icon/index",
+    "btn": "../../common/components/button/index",
+    "timer": "../../common/components/timer/index"
+  }
+}

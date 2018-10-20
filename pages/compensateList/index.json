@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "group": "../../common/components/group/index",
+    "cell": "../../common/components/cell/index",
+    "icon": "../../common/components/icon/index",
+    "btn": "../../common/components/button/index"
+  }
+}
+

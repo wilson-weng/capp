@@ -1,0 +1,37 @@
+.container {
+  min-height: 100%;
+  background: #fff;
+  padding-top: 10rpx;
+}
+
+.pic-block {
+  margin-top: 100rpx;
+  padding: 0 30rpx 130rpx 30rpx;
+}
+
+.pic-item {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  height: 216rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 15rpx 0;
+}
+.pic-item:nth-child(3n-1) {
+  margin: 15rpx 5%;
+  width: 30%;
+}
+
+.pic-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background: #000;
+  opacity: 0.5;
+  color: #fff;
+}
+

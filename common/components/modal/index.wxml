@@ -1,0 +1,19 @@
+<view
+  class="modal"
+  animation="{{animationData}}"
+  hidden="{{!isShow}}"
+  catchtouchmove="myCatchTouch"
+>
+  <view class="modal-mask" catchtap="hideModal"></view>
+  <view class="modal-layer layer-class">
+    <view class="{{['modal-header', headBorder ? 'border-bottom' : '']}}">
+      <slot name="header"></slot>
+    </view>
+    <view class="modal-body">
+      <slot></slot>
+    </view>
+    <view class="modal-footer">
+      <slot name="footer"></slot>
+    </view>
+  </view>
+</view>

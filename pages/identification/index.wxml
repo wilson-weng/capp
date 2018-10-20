@@ -1,0 +1,111 @@
+<view class="container">
+  <title level="4">个人信息:</title>
+  <card isBlock="{{false}}">
+    <view style="padding: 60rpx 40rpx">
+      <cell hasArrow="{{false}}" hasBorder="{{false}}">
+        <view slot="header">真实姓名</view>
+        <view slot="body">
+          <input placeholder="请输入真实姓名" bindinput="setFormData" data-type="name" class="userinfo-input"></input>
+        </view>
+      </cell>
+      <cell hasArrow="{{false}}" hasBorder="{{false}}">
+        <view slot="header">身份证号</view>
+        <view slot="body">
+          <input placeholder="请输入身份证号" bindinput="setFormData" data-type="id_card_number" class="userinfo-input"></input>
+        </view>
+      </cell>
+    </view>
+  </card>
+  <title level="4">照片上传:</title>
+  <card isBlock="{{false}}">
+    <view class="photo-card-padding">
+      <view class="photo-example">
+        <view class="left">
+          <icon type="example" class="example" size="2x"></icon>
+          <image src="{{front_photo}}" mode="widthFix" style="width: 100%"></image>
+          <view class="text-center text-blank">1.身份证头像面</view>
+        </view>
+        <view class="right">
+          <icon type="example" class="example" size="2x"></icon>
+          <image src="{{handhold_photo}}" mode="widthFix" style="width: 100%"></image>
+          <view class="text-center text-blank">2.手持身份证合照</view>
+        </view>
+      </view>
+
+
+      <view class="upload-area" bindtap="addPhoto" data-type="front_photo">
+        <image
+          wx:if="{{formData.front_photo}}"
+          src="{{formData.front_photo}}"
+          mode="scaleToFill"
+          style="width: 100%;height: 100%"
+        ></image>
+        <icon
+          type="upload"
+          size="4x"
+          wx:if="{{!formData.front_photo}}"
+          class="upload-icon"></icon>
+        <view class="uploadTips" wx:if="{{!formData.front_photo}}">上传身份证头像面</view>
+      </view>
+      <view class="upload-area margin-top" bindtap="addPhoto" data-type="handhold_photo">
+        <image
+          wx:if="{{formData.handhold_photo}}"
+          src="{{formData.handhold_photo}}"
+          mode="scaleToFill"
+          style="width: 100%;height: 100%"
+        ></image>
+        <icon
+          type="upload"
+          size="4x"
+          wx:if="{{!formData.handhold_photo}}"
+          class="upload-icon"
+        ></icon>
+        <view class="uploadTips" wx:if="{{!formData.handhold_photo}}">上传手持身份证合照</view>
+      </view>
+    </view>
+  </card>
+
+  <view class="footer border-top">
+    <btn
+      btn-class="submit-btn"
+      size="lg"
+      block
+      pill
+      disable
+      type="secondary"
+      wx:if="{{!canSubmit}}">
+      提交认证
+    </btn>
+    <btn
+      btn-class="submit-btn"
+      size="lg"
+      block
+      pill
+      type="plump"
+      bindtap="submitForm"
+      wx:if="{{canSubmit && !submitLoading}}">
+      提交认证
+    </btn>
+    <btn
+      btn-class="submit-btn"
+      size="lg"
+      block
+      pill
+      type="plump"
+      wx:if="{{canSubmit && submitLoading}}">
+      <icon type="loading-circle" />
+    </btn>
+  </view>
+  <modal id="successComponent">
+    <view slot="header">
+      <icon type="finished" size="3x"></icon>
+    </view>
+    <view class="text-center">
+      <view>资料已提交</view>
+      <view>24小时内系统会回复审核消息。</view>
+    </view>
+    <view slot="footer">
+      <btn type="plump" block pill btn-class="herf-btn" bindtap="hideTips">确定</btn>
+    </view>
+  </modal>
+</view>

@@ -1,0 +1,15 @@
+.container {
+  min-height: 100%;
+  background: #fff;
+  text-align: center;
+}
+
+.main-content {
+  margin-top: 172rpx;
+  padding: 0 100rpx;
+  font-size: 32rpx;
+}
+
+.margin-b-50 {
+  margin-bottom: 50rpx;
+}

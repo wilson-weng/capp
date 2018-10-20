@@ -1,0 +1,20 @@
+.container {
+  min-height: 100%;
+  background: #fff;
+}
+
+.article {
+  padding: 40rpx 30rpx;
+}
+
+.article.article-m-b {
+  margin-bottom: 140rpx;
+}
+
+.article.shadow {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
+}
+
+.article image {
+  width: 100% !important;
+}

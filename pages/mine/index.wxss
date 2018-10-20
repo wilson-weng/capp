@@ -1,0 +1,130 @@
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0)
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0)
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0)
+  }
+}
+
+.container {
+  text-align: center;
+  height: 100%;
+  background-color: #fdfdfd;
+}
+
+.wave-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 500rpx;
+  z-index: 2;
+  background-color: #1c89ea;
+  background-size: contain;
+}
+.wave-inner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+}
+.bg-top {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bg-middle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bg-bottom {
+  z-index: 16;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  background-image: url('https://fe.imdada.cn/bellflower/images/bg/wave-bg1.png')
+}
+.wave-top {
+  background-size: 50% 200rpx;
+  animation: move_wave 4s linear infinite;
+}
+.wave-middle {
+  background-size: 50% 180rpx;
+  background-image: url('https://fe.imdada.cn/bellflower/images/bg/wave-bg2.png');
+  animation: move_wave 3s linear infinite;
+}
+.wave-bottom {
+  background-size: 50% 130rpx;
+  background-image: url('https://fe.imdada.cn/bellflower/images/bg/wave-bg3.png');
+  animation: move_wave 2s linear infinite;
+}
+
+.user-container {
+  position: relative;
+  margin-top: -505rpx;
+  z-index: 3;
+}
+
+.user-info {
+  padding-bottom: 20rpx;
+  box-shadow:0 0 20px 0 rgba(0,0,0,0.05);
+}
+
+
+.avatar {
+  max-height: 180rpx;
+  max-width: 180rpx;
+  border-radius: 90rpx;
+}
+
+.user-name {
+  font-size: 48rpx;
+  font-weight: 400;
+  color: #fff;
+  min-height: 76rpx;
+}
+
+.work-container {
+  position: relative;
+  z-index: 300;
+  padding: 20rpx;
+}
+
+.entrance-padding {
+  padding: 48rpx 90rpx;
+}
+
+.catelog-padding {
+  padding: 40rpx 50rpx;
+}
+
+.blocks-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-muted-more {
+  color: #bcc1cc;
+}
+
+.text-entrance {
+  font-size: 36rpx;
+}
+
+.login-out {
+  margin-top: 150rpx;
+  margin-bottom: 60rpx;
+  text-align: center;
+  color: #1c89ea;
+  font-size: 32rpx;
+}
+
+

@@ -1,0 +1,30 @@
+.cell {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-lg {
+  padding: 40rpx 20rpx;
+}
+
+.cell-body {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-footer {
+}
+
+.hr {
+  display: block;
+  height: 1rpx;
+  background-color: #e9e9eb;
+  margin-left: 20rpx;
+}

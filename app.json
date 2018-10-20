@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/identification/index",
+    "pages/identifyResult/index",
+    "pages/resume/index",
+    "pages/mine/index",
+    "pages/notice/index",
+    "pages/abnormal/index",
+    "pages/income/index",
+    "pages/noRecord/index",
+    "pages/login/index",
+    "pages/protocol/index",
+    "pages/compensateList/index",
+    "pages/compensateDetail/index",
+    "pages/webviewAgent/index",
+    "pages/post/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#1c89ea",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "劳务加demo"
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#2189e5",
+    "borderStyle": "#353535",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/icon/work-detail.png",
+        "selectedIconPath": "images/icon/work-detail-active.png",
+        "text": "任务"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine-active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

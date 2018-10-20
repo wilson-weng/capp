@@ -1,0 +1,12 @@
+<view style="{{opacity}}" class="tip-box">
+  <view class="tip">
+    <slot></slot>
+    <icon
+      catchtap="onClose"
+      wx:if="{{allowClear}}"
+      type="clearable-pure"
+      size="sm"
+      class="tip-clear" />
+  </view>
+  <view class="tip-arrow" />
+</view>

@@ -1,0 +1,35 @@
+.container {
+  min-height: 100%;
+  background: #fff;
+}
+
+.tab-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 8rpx;
+  background-color: #1c89ea;
+}
+
+.income-group {
+  background-color: #fff;
+  padding: 40rpx 30rpx;
+}
+
+.confirming, .confirmed {
+  font-size: 22rpx;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.confirming {
+  border: 1px solid #FF9900;
+}
+
+.confirmed {
+  border: 1px solid #1c89ea;
+}
+

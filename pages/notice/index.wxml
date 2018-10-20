@@ -1,0 +1,27 @@
+<view class="container">
+  <group
+    shadow
+    hasBorder="{{false}}"
+    wx:for="{{activities}}"
+    wx:key="index"
+    class="margin-bottom"
+  >
+    <cell
+      hasBorder="{{false}}"
+      hasArrow="{{false}}"
+      bindtap="toDetail"
+      data-id="{{item.id}}"
+    >
+      <view slot="body">
+        <image src="{{item.main_image_url}}" class="width-100" mode="scaleToFill" />
+        <cell hasBorder="{{false}}">
+          <text slot="body" class="text-lg margin-top text-primary text-black">{{item.title}}</text>
+        </cell>
+      </view>
+    </cell>
+  </group>
+  <view wx:if="{{!activities.length}}" class="text-center no-result-p-t">
+    <icon type="no-result-violation"></icon>
+    <view class="margin-top text-muted text-lg">暂时没有数据</view>
+  </view>
+</view>

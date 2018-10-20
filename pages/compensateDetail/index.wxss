@@ -1,0 +1,13 @@
+.container {
+  min-height: 100%;
+  background: #fff;
+}
+
+.main-content {
+  padding: 30rpx 0 0 30rpx;
+}
+
+.main-content view:nth-child(1), .main-content view:nth-child(5) {
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e9e9eb;
+}

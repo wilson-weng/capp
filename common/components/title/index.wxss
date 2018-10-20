@@ -1,0 +1,20 @@
+.title {
+  padding: 20rpx 20rpx;
+  font-weight: 700;
+}
+
+.title-h1 {
+    font-size: 80rpx;
+}
+.title-h2 {
+    font-size: 60rpx;
+}
+.title-h3 {
+    font-size: 40rpx;
+}
+.title-h4 {
+  font-size: 32rpx;
+}
+.title-h5 {
+  font-size: 28rpx;
+}

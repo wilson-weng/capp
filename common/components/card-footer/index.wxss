@@ -1,0 +1,4 @@
+.card-footer {
+  padding: 25rpx 20rpx;
+  border-top: 1rpx solid #e9e9eb;
+}

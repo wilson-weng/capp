@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="main-content">
+    <view wx:if="{{resultType === CONSTANTS.IDENTIFY_RESULT_ING}}">
+      <image
+        src="https://fe.imdada.cn/bellflower/images/waiting.gif"
+        mode="widthFix"
+        style="width: 180rpx"
+      ></image>
+      <view>实名认证中，资料提交</view>
+      <view>24小时内会出结果，请耐心等待。</view>
+    </view>
+    <view wx:if="{{isAuthFailed}}">
+      <view class="text-center">
+        <icon type="auth-failed" size="5x"></icon>
+      </view>
+      <view class="padding margin-b-50">
+        <view>实名认证失败：{{identifyData.refuseReason}}</view>
+        <view>请重新提交资料。</view>
+      </view>
+      <btn type="plump" block pill bindtap="toIdentifyPage">去提交</btn>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="job-group" wx:if="{{projList.length}}">
+    <view
+      wx:for="{{projList}}"
+      wx:key="index"
+      class="job-cell flex"
+      bindtap="toDetail"
+      data-id="{{item.id}}"
+    >
+      <view class="flex-item-2">
+        <view class="text-lg text-black">{{item.proj_name}}</view>
+        <view>
+          <view
+            wx:for="{{item.tags}}"
+            wx:for-item="tag"
+            wx:key="index"
+            class="text-muted inline-block margin-right-sm"
+          >{{tag}}</view>
+        </view>
+        <view class="text-blank text-md text-ellipsis" style="margin-top: -15rpx;">
+          <text class="text-danger text-lg margin-right-sm">{{item.wage_range}}</text>
+          {{item.address}}
+        </view>
+      </view>
+      <view class="flex-item text-right text-primary margin-y">
+        <image style="max-width: 100px; height: 64px; background-color: #eeeeee;" mode="aspectFill" src="{{item.logo_url}}"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="text-center no-result-p-t">
+    <icon type="no-result-violation"></icon>
+    <view class="margin-top text-muted text-lg">暂时没有数据</view>
+  </view>
+</view>

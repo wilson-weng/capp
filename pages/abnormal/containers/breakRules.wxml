@@ -1,0 +1,33 @@
+<template name="breakRules">
+  <view class="padding">
+    <card isBlock="{{false}}" wx:if="{{handledList.length}}">
+      <view class="income-group">
+        <view wx:for="{{handledList}}" wx:key="index" wx:item="{{item}}">
+          <view wx:if="{{item.scale==='month'}}" class="month-bar">{{item.data}}</view>
+          <cell wx:else bindtap="checkHref" data-item="{{item}}" hasArrow="{{false}}" hasBorder="{{index !== handledList.length - 1}}">
+            <view slot="body">
+              <view class="margin-bottom"><text class="text-huge">{{item.handled_data_str}}</text></view>
+              <view class="text-muted footer-bottom-content">{{item.violation_description}}</view>
+              <view class="text-muted">累计次数：{{item.violation_times}}次</view>
+            </view>
+            <view slot="footer">
+              <view class="margin-bottom text-right text-huge text-danger">
+                <text>{{item.execution_method}}</text>
+              </view>
+            </view>
+          </cell>
+        </view>
+      </view>
+    </card>
+  </view>
+  <view
+    class="text-center padding-y-lg text-blank"
+    wx:if="{{handledList.length && !hasNext}}"
+  >
+    没有更多了哦～
+  </view>
+  <view wx:if="{{!handledList.length}}" class="text-center no-result-p-t">
+    <icon type="no-result-violation"></icon>
+    <view class="margin-top text-muted text-lg">暂时没有数据</view>
+  </view>
+</template>

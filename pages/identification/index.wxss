@@ -1,0 +1,54 @@
+.container {
+  min-height: 100%;
+  background: #fdfdfd;
+  padding: 20rpx;
+  padding-bottom: 200rpx;
+}
+
+.userinfo-input {
+  border: 1px solid #d5dae7;
+  border-radius: 8rpx;
+  padding: 10rpx 0 10rpx 10rpx;
+  margin-left: 10rpx;
+}
+
+.photo-card-padding {
+  padding: 68rpx 30rpx;
+}
+
+.upload-area {
+  position: relative;
+  margin-top: 50rpx;
+  background-color: #f2f2f2;
+  height: 416rpx;
+  border: 1px dashed #1c89ea;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.upload-icon {
+  margin-top: 15%;
+}
+
+.uploadTips {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #6d7077;
+}
+
+.photo-example {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-example .left, .photo-example .right {
+  position: relative;
+  width: 48%;
+}
+
+.left .example, .right .example {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

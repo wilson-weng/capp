@@ -1,0 +1,14 @@
+/* pages/webviewAgent/index.wxss */
+
+.notice-container {
+  text-align:center;
+  background:#ffffff;
+  height:100%;
+  width:100%;
+
+}
+
+.notice-icon {
+  margin-top: 20%;
+  margin-bottom: 50rpx;
+}

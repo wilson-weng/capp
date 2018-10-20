@@ -1,0 +1,11 @@
+{
+  "backgroundColor": "#fdfdfd",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "btn": "../../common/components/button/index",
+    "title": "../../common/components/title/index",
+    "card": "../../common/components/card/index"
+  }
+}
+

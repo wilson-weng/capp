@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="main-content">
+    <view class="padding-top" wx:for="{{detailMap}}" wx:key="index">
+      {{item}}: <text class="padding-left">{{detail[index]}}</text>
+    </view>
+  </view>
+</view>

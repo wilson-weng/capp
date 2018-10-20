@@ -1,0 +1,10 @@
+<view class="notice-container">
+  <view wx:if="{{isSuccess}}" class="notice-icon">
+    <icon type="success" size="100" color="{{item}}"/>
+  </view>
+  <view wx:if="{{!isSuccess}}" class="notice-icon">
+    <icon type="warn" size="100" color="{{item}}"/>
+  </view>
+  <view>{{message}}</view>
+  <button style="margin: 50rpx" bindtap="toHome">返回列表</button>
+</view>

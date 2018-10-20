@@ -1,0 +1,36 @@
+.tip-box {
+  position: relative;
+  height: 0;
+  top: -110rpx;
+  font-size: 26rpx;
+}
+.tip {
+  display: block;
+  max-width: 400rpx;
+  background: rgba(34,37,42,0.90);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.30);
+  border-radius: 8rpx;
+  padding: 12rpx 50rpx 12rpx 12rpx;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  right: 60rpx;
+}
+
+.tip-clear {
+  position: absolute;
+  right: 12rpx;
+  top: 18rpx;
+}
+
+.tip-arrow {
+  width: 0;
+  height: 0;
+  border: 14rpx solid transparent;
+  border-top-color: rgba(34,37,42,0.90);
+  position: absolute;
+  left: 80%;
+  top: 60rpx;
+}

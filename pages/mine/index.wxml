@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="wave-wrapper">
+    <view class="wave-inner bg-top">
+      <view class="wave wave-top"></view>
+    </view>
+    <view class="wave-inner bg-middle">
+      <view class="wave wave-middle"></view>
+    </view>
+    <view class="wave-inner bg-bottom">
+      <view class="wave wave-bottom"></view>
+    </view>
+  </view>
+  <view class="user-container">
+    <view class="user-info">
+      <view class="default-head">
+        <icon type="default-head" bindtap="login"></icon>
+      </view>
+      <view class="user-name">
+        <text bindtap="toAuth">{{userTitle}}</text>
+      </view>
+    </view>
+    <view class="work-container">
+      <card isBlock="{{false}}">
+        <view class="blocks-space entrance-padding">
+          <view bindtap="toIncome">
+            <view class="text-entrance"><icon type="my-income" class="margin-right"></icon>收入明细</view>
+            <view class="text-muted-more" wx:if="{{isWorker}}">
+              <text wx:if="{{staffInfo.last_income.confirm_date}}">{{staffInfo.last_income.confirm_date}}: {{staffInfo.last_income.income}} 元</text>
+              <text wx:else>暂无收入</text>
+            </view>
+            <view class="text-muted-more" wx:else>暂无</view>
+          </view>
+          <view bindtap="toAbnormal">
+            <view class="text-entrance"><icon type="my-abnormal" class="margin-right"></icon>异常违纪</view>
+            <view class="text-muted-more">{{isWorker ? '记录：共' + staffInfo.abnormal_number + '条' : '暂无'}}</view>
+          </view>
+        </view>
+      </card>
+      <card isBlock="{{false}}">
+        <view class="catelog-padding">
+          <view class="blocks-space padding-y-lg" bindtap="toAuth">
+            <view>实名认证</view>
+            <view class="text-muted">{{authTitle}}<icon type="right" wx:if="{{authTitle !== '已认证'}}"></icon></view>
+          </view>
+          <view class="blocks-space padding-y-lg" bindtap="toResume">
+            <view>个人简历</view>
+            <view class="text-muted">{{staffInfo.resume_completed ? '已填写' : '未填写'}}<icon type="right"></icon></view>
+          </view>
+        </view>
+      </card>
+    </view>
+  </view>
+  <view class="login-out" wx:if="{{userId}}">
+    <text bindtap="loginOut">退出登录</text>
+  </view>
+</view>

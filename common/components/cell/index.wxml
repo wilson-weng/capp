@@ -1,0 +1,15 @@
+<block>
+  <view class="{{['cell', size ? 'cell-' + size : '']}}" bindtap="cellClick">
+    <view class="cell-header">
+      <slot name="header"></slot>
+    </view>
+    <view class="cell-body">
+      <slot name="body"></slot>
+    </view>
+    <view class="cell-footer">
+      <slot name="footer"></slot>
+    </view>
+    <icon wx:if="{{hasArrow}}" type="right" size="sm" />
+  </view>
+  <view wx:if="{{hasBorder}}" class="hr" />
+</block>
